@@ -12,11 +12,11 @@ const JS_글쓰기기능 = () => {
   const options = {
     year: date.getFullYear(),
     month: (date.getMonth() + 1).toString().padStart(2, "0"),
-    date: date.getDate(),
+    date: (date.getDate()).toString().padStart(2, "0"),
   };
 
   // 1-1. 내가쓴 일기 불러오기
-  const 날짜담는통 = options.year + "-" + options.month + "-" + options.date;
+  const 날짜담는통 = options.year + ". " + options.month + ". " + options.date;
   const 제목담는통 = window.document.getElementById("HTML_제목입력창").value;
   const 내용담는통 = window.document.getElementById("HTML_내용입력창").value;
 
